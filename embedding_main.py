@@ -39,7 +39,7 @@ if __name__ == '__main__':
 
     with open(args.corpus_path, 'r', encoding='utf-8') as f:
         for line in tqdm(f):
-            corpus.append(line.strip())
+            corpus.append(line.strip().split(" "))
         f.close()
 
     if model_name == 'word2vec':
